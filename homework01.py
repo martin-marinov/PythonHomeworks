@@ -14,9 +14,7 @@ def what_is_my_sign(day, month):
 
     birth_date = (month, day)
 
-    for period, sign in horoscope.items():
-        start_date = period[0]
-        end_date = period[-1]
+    for (start_date, end_date), sign in horoscope.items():
         if birth_date >= start_date and birth_date <= end_date:
             return sign
 
